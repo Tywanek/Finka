@@ -1,6 +1,7 @@
 package com.radlab.finka.ui.activity
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.GridLayoutManager
@@ -8,11 +9,12 @@ import com.radlab.finka.R
 import com.radlab.finka.adapters.FinkaWorkersAdapter
 import com.radlab.finka.data.FinkaViewModel
 import com.radlab.finka.interfaces.FinkaActivityInterface
+import com.radlab.finka.interfaces.FinkaFragmentInterface
 import com.radlab.finka.ui.fragment.FinkaWorkerFragment
 import kotlinx.android.synthetic.main.finka_activity.*
 
+class FinkaActivity : AppCompatActivity(), FinkaActivityInterface{
 
-class FinkaActivity : AppCompatActivity(), FinkaActivityInterface {
     override fun onWorkerSelected(name: String?) {
         if(name!=null)
         supportFragmentManager

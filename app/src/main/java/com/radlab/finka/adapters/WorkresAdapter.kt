@@ -9,7 +9,11 @@ import com.radlab.finka.R
 import com.radlab.finka.interfaces.FinkaActivityInterface
 import kotlinx.android.synthetic.main.finka_list_item.view.*
 
-class FinkaWorkersAdapter(private val items: ArrayList<String>, private val context: Context, private val intface: FinkaActivityInterface) : RecyclerView.Adapter<ViewHolder>() {
+class FinkaWorkersAdapter(
+    private val items: ArrayList<String>,
+    private val context: Context,
+    private val intface: FinkaActivityInterface) : RecyclerView.Adapter<ViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.finka_list_item, parent, false))
     }
