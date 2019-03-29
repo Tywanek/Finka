@@ -19,7 +19,7 @@ class FinkaViewModel : ViewModel() {
     }
 
     fun mockWorkers():ArrayList<String>{
-        for (i in 1..50)
+        for (i in 1..60)
             workersList.add(""+i)
         return workersList
     }

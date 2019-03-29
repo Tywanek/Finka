@@ -20,7 +20,7 @@ class FinkaWorkersAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.tvFinkaWorker.text = items[position]
-        holder.tvFinkaWorker.setOnClickListener {
+        holder.cardView.setOnClickListener {
             intface.onWorkerSelected(items[position])
         }
     }
@@ -32,4 +32,5 @@ class FinkaWorkersAdapter(
 
 class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     val tvFinkaWorker = view.tv_finka_worker!!
+    val cardView = view.cardView!!
 }
