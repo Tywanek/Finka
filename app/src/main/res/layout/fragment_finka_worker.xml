@@ -15,10 +15,12 @@
             android:orientation="vertical">
 
         <TextView
+                android:layout_margin="10dp"
+                android:textSize="35sp"
                 android:id="@+id/user_name_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="36dp"
+                android:textStyle="bold"
                 android:text="@{model.name}"
                 tools:text="Name"/>
 
