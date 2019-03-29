@@ -6,11 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.radlab.finka.R
+import com.radlab.finka.data.Worker
 import com.radlab.finka.interfaces.FinkaActivityInterface
 import kotlinx.android.synthetic.main.finka_list_item.view.*
 
 class FinkaWorkersAdapter(
-    private val items: ArrayList<String>,
+    private val items: ArrayList<Worker>,
     private val context: Context,
     private val intface: FinkaActivityInterface) : RecyclerView.Adapter<ViewHolder>() {
 
@@ -19,9 +20,10 @@ class FinkaWorkersAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvFinkaWorker.text = items[position]
+        holder.tvFinkaWorkerName.text = items[position].name
+        holder.tvFinkaWorkerNumber.text = items[position].id_number.toString()
         holder.cardView.setOnClickListener {
-            intface.onWorkerSelected(items[position])
+            intface.onWorkerSelected(items[position].name)
         }
     }
 
@@ -31,6 +33,7 @@ class FinkaWorkersAdapter(
 }
 
 class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val tvFinkaWorker = view.tv_finka_worker!!
+    val tvFinkaWorkerName = view.worker_name!!
+    val tvFinkaWorkerNumber = view.worker_number!!
     val cardView = view.cardView!!
 }

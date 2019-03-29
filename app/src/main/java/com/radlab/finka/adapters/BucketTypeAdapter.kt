@@ -23,7 +23,7 @@ class BucketTypeAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BucketTypeViewHolder {
-        return BucketTypeViewHolder(LayoutInflater.from(context).inflate(R.layout.finka_list_item, parent, false))
+        return BucketTypeViewHolder(LayoutInflater.from(context).inflate(R.layout.bucket_type_list_item, parent, false))
     }
 
     override fun getItemCount(): Int {
@@ -32,5 +32,5 @@ class BucketTypeAdapter(
 }
 
 class BucketTypeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    val tvBucketType = view.tv_finka_worker!!
+    val tvBucketType = view.worker_number!!
 }

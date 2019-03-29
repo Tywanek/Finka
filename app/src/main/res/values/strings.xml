@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Finka</string>
     <string name="action_settings">Settings</string>
+    <string name="alert_dialog_title_close_app">Close app?</string>
+    <string name="alert_dialog_message_close_app">Are you want to close this app?</string>
+    <string name="alert_dialog_close_app_yes_button">YES</string>
+    <string name="alert_dialog_close_app_cancel_button">Cancel</string>
+    <string name="login_view_hint_username">username</string>
+    <string name="login_view_hint_password">password</string>
 </resources>

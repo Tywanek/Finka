@@ -19,15 +19,6 @@ class FinkaWorkerFragment : Fragment(), FinkaFragmentInterface {
 
     val finkaWorkerFragmentViewModel = FinkaWorkerFragmentViewModel()
 
-    companion object {
-        private const val KEY = "my_key"
-        fun newInstance(user: String) = FinkaWorkerFragment().apply {
-            arguments = Bundle().apply {
-                putString(KEY, user)
-            }
-        }
-    }
-
     override fun onBucketSelected(name: String?) {
         Toast.makeText(context, name, Toast.LENGTH_SHORT).show()
     }
@@ -36,16 +27,11 @@ class FinkaWorkerFragment : Fragment(), FinkaFragmentInterface {
         val binding: FragmentFinkaWorkerBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_finka_worker, container, false)
         binding.model = finkaWorkerFragmentViewModel
-
         return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        finkaWorkerFragmentViewModel.setWorker("Testoo")
-        //val worker: String = arguments?.getString(KEY)!!
-
-        //finkaWorkerFragmentViewModel.setWorker(worker)
         buckets_recyclerView.layoutManager = LinearLayoutManager(context)
         buckets_recyclerView.adapter =
             BucketTypeAdapter(finkaWorkerFragmentViewModel.getBucketTypeListList(), context!!, this)

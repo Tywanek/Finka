@@ -9,7 +9,7 @@
         tools:showIn="@layout/activity_main"
         tools:context=".ui.activity.MainActivity">
     <ImageView
-            android:src="@drawable/finka_logo_1"
+            android:src="@drawable/finka_logo_2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"

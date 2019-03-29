@@ -20,10 +20,14 @@ class FinkaWorkerFragmentViewModel : ViewModel() {
         return bucketTypeList;
     }
 
-    fun getWorkersList(): ArrayList<String> {
-        val workersList: ArrayList<String> = ArrayList()
-        for (i in 1..60)
-            workersList.add(""+i)
+    fun getWorkersList(): ArrayList<Worker> {
+        val workersList: ArrayList<Worker> = ArrayList()
+        workersList.add(Worker("Jesus Maria","Sanchez Villegas",1))
+        workersList.add(Worker("Carlos","Sanchez Villegas",2))
+        for (i in 3..60){
+            workersList.add(Worker("Jose Manuel","Sanchez Villegas",i))
+        }
+
         return workersList
     }
 }
